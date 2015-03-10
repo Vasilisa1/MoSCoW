@@ -1,0 +1,56 @@
+<div>
+    <h1>Eisen & Wensen</h1>
+    <hr/>
+</div>
+<div>
+    <form ng-submit="formSubmit()">
+        <div class="form-group">
+            <label for="projectTitle">Naam van het project</label>
+            <input type="text" class="form-control" id="projectTitle" ng-model="project.title" placeholder="Project naam">
+        </div>
+        <div class="form-group">
+            <label for="projectDescription">Beschrijving van het project</label>
+            <textarea class="form-control" id="projectDescription" ng-model="project.description" placeholder="Beschrijving"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="wish1">Eis {{1}}:</label>
+            <input type="text" class="form-control" id="wish1" placeholder="Ik wil uiteindelijk....">
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input type="radio" id="must1" name="must1" value="Must have" /> M
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" id="should1" name="should1" value="Should have" /> S
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" id="could1" name="could1" value="Could have" /> C
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" id="wont1" name="wont1" value="Won't have" /> W
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="wish2">Eis {{2}}</label>
+            <input type="text" class="form-control" id="wish2" placeholder="Ik wil uiteindelijk....">
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input type="radio" id="must2" name="must2" value="Must have" /> M
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" id="should2" name="should2" value="Should have" /> S
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" id="could2" name="could2" value="Could have" /> C
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" id="wont2" name="wont2" value="Won't have" /> W
+                </label>
+            </div>
+        </div>
+        <br/>
+        <button ng-click="formSubmit()" type="submit" class="btn btn-default">Opslaan</button>
+    </form>
+</div>
+<div><pre>{{ project }}</pre></div>
